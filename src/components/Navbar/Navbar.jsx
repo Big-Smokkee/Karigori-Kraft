@@ -20,7 +20,7 @@ const Navbar = () => {
 
     return (
         <nav className={`sticky top-0 z-50 bg-white border-b ${colors.border}`}>
-            <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 
                 {/* Logo Section */}
                 <div className="flex items-center gap-3 cursor-pointer group">
