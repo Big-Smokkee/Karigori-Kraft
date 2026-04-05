@@ -1,11 +1,13 @@
 import { HeartHandshake, Menu, Scissors, Search, ShoppingCart, X } from 'lucide-react';
 import React, { useState } from 'react';
 import { useCart } from '../CartContext/CartContext'; // Add this line
+import CartDrawer from '../CartDrawer/CartDrawer';
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     const { cartCount } = useCart();
+    const [isCartOpen, setIsCartOpen] = useState(false);
 
     const navLinks = ["Shop", "Categories", "New Arrivals", "About Us", "Blog"];
 
@@ -63,7 +65,7 @@ const Navbar = () => {
                         <Search size={20}></Search>
                     </button>
 
-                    <button className={`${colors.dark} hover:text-[#C4612A] transition-colors relative`}>
+                    <button className={`${colors.dark} hover:text-[#C4612A] transition-colors relative`} onClick={() => setIsCartOpen(true)}>
                         <ShoppingCart size={20}></ShoppingCart>
                         {cartCount > 0 && (
                             <span className="absolute -top-2 -right-2 bg-[#C4612A] text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
@@ -112,6 +114,8 @@ const Navbar = () => {
                     ))}
                 </div>
             )}
+
+            <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)}></CartDrawer>
         </nav>
     );
 };
