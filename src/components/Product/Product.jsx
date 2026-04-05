@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import { useCart } from '../CartContext/CartContext'; // Import koro
 import { Heart, ShoppingCart, Star } from 'lucide-react';
 
 const Product = ({ item }) => {
     const [isWished, setIsWished] = useState(false);
+    const { addToCart } = useCart();
+    const [selected, setSelected] = useState(false);
 
     // Function for rating stars
     const renderStars = (rating) => {
@@ -82,12 +85,27 @@ const Product = ({ item }) => {
                         )}
                     </div>
 
-                    <button className="bg-[#C4612A] text-white px-5 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 hover:bg-[#9B4A1E] transition-all active:scale-95">
-                        <ShoppingCart size={16} /> Add
+                    <button
+                        onClick={() => {
+                            setSelected(true)
+                            addToCart(item)
+                        }} // Click korle add hobe
+                        className="bg-[#C4612A] text-white px-5 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 hover:bg-[#9B4A1E]"
+                        disabled={selected}
+                    >
+                        {!selected ? (
+                            <span className='flex gap-2'>
+                                <ShoppingCart size={16} /> Add
+                            </span>
+                        ) : (
+                            "Selected"
+                        )}
+
+
                     </button>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

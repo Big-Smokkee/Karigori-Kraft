@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 const Products = () => {
     const [products, setProducts] = useState([]);
     const [activeTab, setActiveTab] = useState("All");
-    const [visibleCount, setVisibleCount] = useState(8); // Shuru te 8 ta dekhabe
+    const [visibleCount, setVisibleCount] = useState(8);
 
     useEffect(() => {
         fetch('products.json')
