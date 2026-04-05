@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "name": "Yarn & Thread",
+    "emoji": "https://i.ibb.co.com/gbncd1hZ/1f9f6.png",
+    "count": "120+",
+    "bg": "bg-[#FEF0E6]",
+    "accent": "text-[#C4612A]",
+    "description": "Premium silk and cotton threads."
+  },
+  {
+    "id": 2,
+    "name": "Fabric & Cloth",
+    "emoji": "https://i.ibb.co.com/SXm8mSgq/OIP-22-removebg-preview.png",
+    "count": "85+",
+    "bg": "bg-[#FEF7E6]",
+    "accent": "text-[#D4A853]",
+    "description": "Handloom cotton and Jamdani pieces."
+  },
+  {
+    "id": 3,
+    "name": "Beads & Gems",
+    "emoji": "https://i.ibb.co.com/jv1sLqnJ/R.png",
+    "count": "200+",
+    "bg": "bg-[#E6F0F0]",
+    "accent": "text-[#1D5C5C]",
+    "description": "Crystal, glass, and clay beads."
+  },
+  {
+    "id": 4,
+    "name": "Paper Crafts",
+    "emoji": "https://i.ibb.co.com/YBtp2Qj8/R-1.png",
+    "count": "95+",
+    "bg": "bg-[#F7EFE6]",
+    "accent": "text-[#9B4A1E]",
+    "description": "Handmade paper and origami kits."
+  },
+  {
+    "id": 5,
+    "name": "Wood & Carving",
+    "emoji": "https://i.ibb.co.com/pBpc0Fdy/420470-wood.png",
+    "count": "60+",
+    "bg": "bg-[#F0EDE6]",
+    "accent": "text-[#6B4226]",
+    "description": "Blocks for printing and wood tools."
+  },
+  {
+    "id": 6,
+    "name": "Painting Supplies",
+    "emoji": "https://i.ibb.co.com/xSFNGDf0/artist-palette-1f3a8.png",
+    "count": "150+",
+    "bg": "bg-[#E6EFEF]",
+    "accent": "text-[#2D8282]",
+    "description": "Natural dyes and artisan brushes."
+  },
+  {
+    "id": 7,
+    "name": "Pottery & Clay",
+    "emoji": "https://i.ibb.co.com/ynpPXJjY/heyyhk7j9iop3wcsiz7vfd8fko9c.png",
+    "count": "45+",
+    "bg": "bg-[#FDF2F2]",
+    "accent": "text-[#D63030]",
+    "description": "Traditional terracotta and glazing."
+  },
+  {
+    "id": 8,
+    "name": "Metal & Brass",
+    "emoji": "https://i.ibb.co.com/RT26XC6T/8591479.png",
+    "count": "30+",
+    "bg": "bg-[#F4F4F4]",
+    "accent": "text-[#4A4A4A]",
+    "description": "Brass trinkets and jewelry findings."
+  },
+  {
+    "id": 9,
+    "name": "Basketry & Jute",
+    "emoji": "https://i.ibb.co.com/cSyt10zN/96-965116-herb-leaf-emoji-sticker.png",
+    "count": "75+",
+    "bg": "bg-[#EEF2E8]",
+    "accent": "text-[#5B7C32]",
+    "description": "Eco-friendly jute and cane fibers."
+  },
+  {
+    "id": 10,
+    "name": "Leather Craft",
+    "emoji": "https://i.ibb.co.com/jvmCgGrB/briefcase-1f4bc.png",
+    "count": "40+",
+    "bg": "bg-[#F9EBEA]",
+    "accent": "text-[#A93226]",
+    "description": "Quality scraps and stitching tools."
+  },
+  {
+    "id": 11,
+    "name": "Jamdani Weaving",
+    "emoji": "https://i.ibb.co.com/21WgvMn5/R-3.png",
+    "count": "55+",
+    "bg": "bg-[#FFF9E6]",
+    "accent": "text-[#B8901E]",
+    "description": "Authentic tools and fine cotton for Jamdani art."
+  },
+  {
+    "id": 12,
+    "name": "Traditional Jewelry",
+    "emoji": "https://i.ibb.co.com/N64k54BW/R-removebg-preview.png",
+    "count": "110+",
+    "bg": "bg-[#F3E8FF]",
+    "accent": "text-[#7E22CE]",
+    "description": "Oxidized metal and handmade clay jewelry components."
+  }
+]
