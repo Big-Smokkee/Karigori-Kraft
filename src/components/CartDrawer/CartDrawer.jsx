@@ -17,7 +17,7 @@ const CartDrawer = ({ isOpen, onClose }) => {
             />
 
             {/* Side Panel */}
-            <div className={`fixed top-0 right-0 h-full w-full max-w-md bg-white z-[70] shadow-2xl transform transition-transform duration-500 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+            <div className={`fixed top-0 right-0 h-full w-full max-w-md bg-white z-70 shadow-2xl transform transition-transform duration-500 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
 
                 <div className="flex flex-col h-full">
                     {/* Header */}
@@ -39,7 +39,7 @@ const CartDrawer = ({ isOpen, onClose }) => {
                         ) : (
                             cartItems.map((item) => (
                                 <div key={item.id} className="flex gap-4 border-b border-gray-100 pb-4">
-                                    <div className="w-20 h-20 bg-[#FEF0E6] rounded-xl flex-shrink-0 flex items-center justify-center text-3xl">
+                                    <div className="w-20 h-20 bg-[#FEF0E6] rounded-xl shrink-0 flex items-center justify-center text-3xl">
                                         <img src={item.image} alt={item.name} className="w-12 h-12 object-contain" />
                                     </div>
 
