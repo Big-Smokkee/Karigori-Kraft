@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "Anika Tabassum",
+    "role": "Fashion Designer",
+    "image": "https://i.pravatar.cc/150?u=anika",
+    "rating": 5,
+    "comment": "KarigoriKraft-er yarn gulo asholei osadharon. Ami amar prothom project-er jonno silk thread niyechi, quality ekdom top-notch!",
+    "date": "2 Days ago"
+  },
+  {
+    "id": 2,
+    "name": "Tanvir Ahmed",
+    "role": "DIY Enthusiast",
+    "image": "https://i.pravatar.cc/150?u=tanvir",
+    "rating": 4,
+    "comment": "Delivery ektu deri hoyeche kintu packaging chilo khub e sundor. Beads gulo dekhte premium lage.",
+    "date": "1 Week ago"
+  },
+  {
+    "id": 3,
+    "name": "Nusrat Jahan",
+    "role": "Boutique Owner",
+    "image": "https://i.pravatar.cc/150?u=nusrat",
+    "rating": 5,
+    "comment": "Handmade jinish-er jonno KarigoriKraft-er upor bhorsha kora jay. Tader collection asholei unique.",
+    "date": "3 Days ago"
+  }
+]
