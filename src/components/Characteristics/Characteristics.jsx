@@ -3,7 +3,7 @@ import React from 'react';
 
 const Characteristics = () => {
     return (
-        <div className='bg-[#C4612A] flex justify-between py-6 px-14'>
+        <div className='bg-[#C4612A] flex justify-between flex-wrap py-6 px-14'>
             <div className='flex gap-6 items-center'>
                 <span className='font-semibold text-lg'>
                     <Truck></Truck>
