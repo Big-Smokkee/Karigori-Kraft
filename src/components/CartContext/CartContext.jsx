@@ -5,6 +5,18 @@ const CartContext = createContext();
 export const CartProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
 
+    // CartContext.jsx er bhitore eita thakbe (assuming products oikhane fetch korsi)
+    const [allProducts, setAllProducts] = useState([]); // Database theke asha sob product
+
+    // Ekta search function banai
+    const searchProducts = (query) => {
+        if (!query) return [];
+        return allProducts.filter(product =>
+            product.name.toLowerCase().includes(query.toLowerCase()) ||
+            product.category.toLowerCase().includes(query.toLowerCase())
+        );
+    };
+
     const addToCart = (product) => {
         setCartItems((prev) => {
             // Check korbo product ta age theke cart-e ache kina
@@ -33,7 +45,7 @@ export const CartProvider = ({ children }) => {
     };
 
     return (
-        <CartContext.Provider value={{ cartItems, addToCart, cartCount, removeFromCart, updateQuantity }}>
+        <CartContext.Provider value={{ cartItems, addToCart, cartCount, removeFromCart, updateQuantity, allProducts, setAllProducts, searchProducts }}>
             {children}
         </CartContext.Provider>
     );
