@@ -74,7 +74,10 @@ const Navbar = () => {
                         onClick={() => setIsSearchOpen(!isSearchOpen)}
                         className={`${colors.dark} hover:text-[#C4612A] transition-colors`}
                     >
-                        <Search size={20}></Search>
+                        {
+                            isSearchOpen ? <X></X> : <Search size={20}></Search>
+
+                        }
                     </button>
 
                     <button className={`${colors.dark} hover:text-[#C4612A] transition-colors relative`} onClick={() => setIsCartOpen(true)}>
