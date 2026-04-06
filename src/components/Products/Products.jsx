@@ -1,6 +1,7 @@
 import { ChevronDown } from 'lucide-react';
 import Product from '../Product/Product';
 import React, { useState, useEffect } from 'react';
+import { useCart } from '../CartContext/CartContext';
 
 const Products = () => {
     const [products, setProducts] = useState([]);
@@ -13,6 +14,17 @@ const Products = () => {
             .then(data => setProducts(data))
             .catch(err => console.error("Fetch error:", err));
     }, []);
+
+    const { setAllProducts } = useCart();
+
+    useEffect(() => {
+        fetch('/products.json')
+            .then(res => res.json())
+            .then(data => {
+                setProducts(data);
+                setAllProducts(data); // Eita context-e pathae dilam search-er jonno
+            });
+    });
 
     // Category Filter
     const filteredProducts = activeTab === "All"
