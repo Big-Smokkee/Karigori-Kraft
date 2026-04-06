@@ -25,7 +25,7 @@ const CartDrawer = ({ isOpen, onClose }) => {
                         <h2 className="text-xl font-bold text-[#1C1410] flex items-center gap-2">
                             <ShoppingBag size={20} className="text-[#C4612A]" /> Your Cart
                         </h2>
-                        <button onClick={onClose} className="p-2 hover:bg-gray-200 rounded-full transition-colors">
+                        <button onClick={onClose} className="p-2 bg-amber-600 hover:bg-amber-700 rounded-full transition-colors">
                             <X size={24} />
                         </button>
                     </div>
