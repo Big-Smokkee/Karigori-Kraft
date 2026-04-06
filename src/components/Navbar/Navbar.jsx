@@ -9,6 +9,11 @@ const Navbar = () => {
     const { cartCount } = useCart();
     const [isCartOpen, setIsCartOpen] = useState(false);
 
+    const [searchQuery, setSearchQuery] = useState("");
+    const { searchProducts } = useCart();
+    const [searchResults, setSearchResults] = useState([]);
+
+
     const navLinks = ["Shop", "Categories", "New Arrivals", "About Us", "Blog"];
 
     // Design Tokens (Matching the KarigoriKraft palette)
@@ -18,6 +23,13 @@ const Navbar = () => {
         dark: "text-[#1C1410]",
         cream: "bg-[#FAF6F1]",
         border: "border-[#EDE0D0]"
+    };
+
+
+    const handleSearch = (e) => {
+        const query = e.target.value;
+        setSearchQuery(query);
+        setSearchResults(searchProducts(query));
     };
 
     return (
@@ -85,17 +97,41 @@ const Navbar = () => {
             </div>
 
             {/* Expandable Search Bar */}
+            {/* Expandable Search Bar with Live Results */}
             {isSearchOpen && (
-                <div className="bg-white border-b px-6 py-4 animate-in slide-in-from-top duration-200">
-                    <div className="max-w-2xl mx-auto flex gap-3">
-                        <input
-                            type="text"
-                            placeholder="Search silk thread, batik fabric, beads..."
-                            className="w-full bg-[#FAF6F1] border border-[#EDE0D0] px-4 py-2 rounded-lg focus:outline-none focus:border-[#C4612A] text-sm"
-                        />
-                        <button className={`${colors.terraBg} text-white px-6 py-2 rounded-lg text-sm font-bold`}>
-                            Search
-                        </button>
+                <div className="absolute top-20 left-0 w-full bg-white text-black border-b shadow-xl z-50 animate-in slide-in-from-top duration-300">
+                    <div className="max-w-3xl mx-auto p-6">
+                        <div className="relative">
+                            <input
+                                type="text"
+                                autoFocus
+                                placeholder="Search handmade crafts..."
+                                className="w-full bg-[#FAF6F1] border-2 border-[#EDE0D0] px-6 py-4 rounded-2xl focus:border-[#C4612A] outline-none text-lg"
+                                value={searchQuery}
+                                onChange={handleSearch}
+                            />
+
+                            {/* Live Results Dropdown */}
+                            {searchQuery && (
+                                <div className="mt-4 bg-white rounded-2xl border border-gray-100 max-h-100 overflow-y-auto shadow-2xl">
+                                    {searchResults.length > 0 ? (
+                                        searchResults.map(product => (
+                                            <div key={product.id} className="flex items-center gap-4 p-4 hover:bg-[#FAF6F1] cursor-pointer transition-colors border-b last:border-0">
+                                                <img src={product.image} className="w-12 h-12 rounded-lg object-cover bg-gray-100" alt="" />
+                                                <div>
+                                                    <h4 className="font-bold text-[#1C1410]">{product.name}</h4>
+                                                    <p className="text-sm text-[#C4612A]">৳{product.price}</p>
+                                                </div>
+                                            </div>
+                                        ))
+                                    ) : (
+                                        <div className="p-10 text-center text-gray-400 italic">
+                                            No products found for "{searchQuery}"
+                                        </div>
+                                    )}
+                                </div>
+                            )}
+                        </div>
                     </div>
                 </div>
             )}
